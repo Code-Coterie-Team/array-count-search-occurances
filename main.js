@@ -1,19 +1,22 @@
-function countOccurances(arry){
-    const count={}
-    arry.forEach(element =>{
-        count[element]=(count[element] || 0 )+1;
+function countOccurances(){
+    let getInput=document.getElementById("array").value;
+    let array=getInput.toLowerCase().split(" ");
+    var result=document.getElementById("result");
+    result.innerHTML="";
+    const counts={}
+    array.forEach(element =>{
+        counts[element]=(counts[element] || 0 )+1;
         
     })
-    //  for (const element in count){
-    //     (`${element} = ${count[element]}`);
-    // }
-    return count;
     
-    
+    for ( const [word,count] of Object.entries(counts)){
+    const objDiv=document.createElement('div');
+    objDiv.textContent=` ${word} : ${count}`;
+    result.appendChild(objDiv);
+    }
 
 }
 
-const words=countOccurances( ["lama","cow", "cat", "cow","monkey","lama"]);
-var result=document.getElementById("result");
-result.innerHTML=JSON.stringify(words);
+
+
 

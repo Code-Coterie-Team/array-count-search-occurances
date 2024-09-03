@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head></head>
+    <style>
+        textarea{
+            width:80%;
+            height: 200px;
+            padding:20px;   
+            
+        }
+    </style>
     <body>
         <h1>Implement array-count-search-occurances</h1>
-        <div id="result"></div>
+            <p>write here your text ,we count your words ,you can trust us</p>
+            <form onsubmit="countOccurances() ; return false"> 
+                <textarea id="array"></textarea>
+                <button >submit</button>
+                <div id="result"></div>
+            </form>
+
         <script src="main.js"></script>
     </body>
 </html>
